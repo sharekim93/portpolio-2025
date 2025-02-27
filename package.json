@@ -1,0 +1,19 @@
+{
+  "name": "portpolio-2025",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@remix-run/node": "^2.15.3",
+    "@remix-run/react": "^2.15.3",
+    "@remix-run/serve": "^2.15.3",
+    "isbot": "4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.15.3",
+    "vite": "^6.2.0"
+  }
+}
