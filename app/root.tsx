@@ -1,11 +1,11 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "react-router";
 import {
   Links,
   LiveReload,
   Meta,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "react-router";
 import styles from "./root.css?url";
 import Layout from "./layout/Layout";
 
@@ -17,6 +17,7 @@ export default function App() {
   return (
     <html lang="en">
       <head>
+        <title>Frontend Developer, Share Kim</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

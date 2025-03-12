@@ -1,4 +1,4 @@
-import { useLocation } from "@remix-run/react";
+import { useLocation } from "react-router";
 import { useRef } from "react";
 import AnimatedOutlet from "./AnimatedOutlet";
 import { SwitchTransition, CSSTransition } from "react-transition-group";

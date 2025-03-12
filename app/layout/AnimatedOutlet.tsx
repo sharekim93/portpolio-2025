@@ -1,4 +1,4 @@
-import { useOutlet } from "@remix-run/react";
+import { useOutlet } from "react-router";
 import { useState } from "react";
 
 function AnimatedOutlet() {
