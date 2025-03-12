@@ -14,3 +14,6 @@ build
 .cache
 
 *.tsbuildinfo
+
+#react-router
+.react-router/

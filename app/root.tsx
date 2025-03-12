@@ -1,11 +1,5 @@
 import type { LinksFunction } from "react-router";
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import { Links, Meta, Scripts, ScrollRestoration } from "react-router";
 import styles from "./root.css?url";
 import Layout from "./layout/Layout";
 
@@ -27,7 +21,6 @@ export default function App() {
         <Layout />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
