@@ -1,36 +1,31 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CustomFallback from "@/components/CustomFallback";
+import Intro from "@/components/Intro";
+import ScrollDown from "@/components/ScrollDown";
+import { Suspense, lazy } from "react";
 
-export default function Index() {
+const HomePage = () => {
+  const AboutComponent = lazy(() => import("@/components/About"));
+  const ExperienceComponent = lazy(() => import("@/components/Experience"));
+  const ProjectsComponent = lazy(() => import("@/components/Projects"));
+  const InfoComponent = lazy(() => import("@/components/Info"));
   return (
-    <div className="container mx-auto p-4">
-      <Tabs defaultValue="introduce" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="introduce">Introduce</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
-          <TabsTrigger value="contact">Contact</TabsTrigger>
-        </TabsList>
-        <TabsContent value="introduce">
-          <div className="mt-6">
-            <h1 className="text-2xl font-bold">Introduce</h1>
-            <p>
-              Welcome to the introduction section. Here you can find more about
-              us.
-            </p>
-          </div>
-        </TabsContent>
-        <TabsContent value="projects">
-          <div className="mt-6">
-            <h1 className="text-2xl font-bold">Projects</h1>
-            <p>Here are some of our projects. Explore and enjoy!</p>
-          </div>
-        </TabsContent>
-        <TabsContent value="contact">
-          <div className="mt-6">
-            <h1 className="text-2xl font-bold">Contact</h1>
-            <p>Feel free to reach out to us through this contact section.</p>
-          </div>
-        </TabsContent>
-      </Tabs>
+    <div className="w-full h-full mx-20">
+      <Intro />
+      <Suspense fallback={<CustomFallback />}>
+        <AboutComponent />
+      </Suspense>
+      <Suspense fallback={<CustomFallback />}>
+        <ExperienceComponent />
+      </Suspense>
+      <Suspense fallback={<CustomFallback />}>
+        <ProjectsComponent />
+      </Suspense>
+      <Suspense fallback={<CustomFallback />}>
+        <InfoComponent />
+      </Suspense>
+      <ScrollDown />
     </div>
   );
-}
+};
+
+export default HomePage;
