@@ -8,8 +8,9 @@ const HomePage = () => {
   const ExperienceComponent = lazy(() => import("@/components/Experience"));
   const ProjectsComponent = lazy(() => import("@/components/Projects"));
   const InfoComponent = lazy(() => import("@/components/Info"));
+
   return (
-    <div className="w-full h-full mx-20">
+    <div className="container w-full h-full px-20">
       <Intro />
       <Suspense fallback={<CustomFallback />}>
         <AboutComponent />
