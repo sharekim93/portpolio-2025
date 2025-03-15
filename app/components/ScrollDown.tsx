@@ -11,13 +11,13 @@ export default function ScrollDown() {
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(false);
-      const lastSectionHeight = document.getElementById("info")?.clientHeight;
+      const lastSectionHeight = document?.getElementById("info")?.clientHeight;
 
       if (
         lastSectionHeight &&
         // 가장 아래까지 스크롤 했을 때의 ScrollY 는 body.clientHeight - lastSectionHeight 이다
         // 따라서 Contact Section의 시작 Y값보다 ScrollY 가 커지면 clearTimeout
-        window.scrollY > document.body.clientHeight - lastSectionHeight * 2
+        window.scrollY > document?.body.clientHeight - lastSectionHeight * 2
       ) {
         clearTimeout(timerId);
         return;
