@@ -28,11 +28,9 @@ export default function Projects() {
           </p>
 
           <BounceCards
-            className="w-full flex justify-center"
+            className="w-screen flex justify-end"
             images={[first, second, third, fourth, fifth]}
             enableHover
-            containerWidth={document.body.clientWidth / 2 || 600}
-            containerHeight={400}
           />
         </li>
         <li className="mb-4 min-h-1/2 flex flex-col gap-1">
