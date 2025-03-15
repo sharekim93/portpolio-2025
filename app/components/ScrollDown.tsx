@@ -25,7 +25,7 @@ export default function ScrollDown() {
 
       const id = setTimeout(() => {
         setIsVisible(true);
-      }, 3000);
+      }, 1000);
       setTimerId(id);
     };
 
@@ -64,7 +64,7 @@ export default function ScrollDown() {
       variants={fadeIn}
       animate={isVisible ? "visible" : "hidden"}
       initial="hidden"
-      className={`fixed bottom-12 left-0 right-0 flex justify-center gap-2 w-full mt-16 pt-8 select-none   ${
+      className={`fixed bottom-16 flex justify-center gap-2 w-screen md:w-full right-0 left-0 mt-16 pt-8 select-none   ${
         isVisible && "hover:cursor-pointer"
       }`}
       onClick={down}
