@@ -28,8 +28,9 @@ export default function Projects() {
           </p>
 
           <BounceCards
-            className="w-screen flex justify-end"
+            className="w-screen flex justify-end overflow-scroll scrollbar-hide"
             images={[first, second, third, fourth, fifth]}
+            containerWidth={340}
             enableHover
           />
         </li>
