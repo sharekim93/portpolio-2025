@@ -122,3 +122,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color: transparent; /* prevent tap highlight color / shadow */
+}
+
+*:not(input):not(textarea) {
+  -webkit-user-select: none; /* input, textarea 를 제외하고 user_select를 허용하지 않는다. */
+  user-select: none; /* 표준 속성 추가 */
+}
