@@ -14,25 +14,27 @@ export default function Contact() {
       initial="hidden"
       animate={animation}
       variants={fadeIn}
-      className="container w-full h-full min-h-screen flex flex-col items-start"
+      className="container w-full h-full min-h-screen flex flex-col align-start mt-20"
     >
-      <h2 className="text-3xl font-bold mb-4 text-foreground">Info</h2>
-      <div className="w-1/4 mt-4 flex flex-col gap-2">
-        <div className="grid grid-cols-2">
-          <p className="leading-relaxed text-gray-600 text-right pr-2">
+      <h2 className="text-3xl font-bold mb-4 text-foreground self-start">
+        Info
+      </h2>
+      <div className="w-auto mt-4 flex flex-col gap-2 text-md md:text-lg">
+        <div className="flex flex-initial">
+          <p className="leading-relaxed text-gray-600 text-right pr-2 ">
             Email :
           </p>
           <a href="mailto:sksyag@naver.com">sksyag@naver.com</a>
         </div>
-        <div className="grid grid-cols-2">
-          <p className="leading-relaxed text-gray-600 text-right pr-2">
+        <div className="flex flex-initia ">
+          <p className="leading-relaxed text-gray-600 text-right pr-2 ">
             Github :
           </p>
           <a className="" href="https://github.com/sharekim93">
             <img src={githubMark} className="w-6 h-6 inline" />
           </a>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="flex flex-initial">
           <p className="leading-relaxed text-gray-600 text-right pr-2">
             blog :
           </p>

@@ -10,7 +10,7 @@ const HomePage = () => {
   const InfoComponent = lazy(() => import("@/components/Info"));
 
   return (
-    <div className="container w-full h-full px-20">
+    <div className="container w-full h-full px-8 md:px-20 min-w-s">
       <Intro />
       <Suspense fallback={<CustomFallback />}>
         <AboutComponent />
