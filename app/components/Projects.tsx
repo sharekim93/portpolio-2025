@@ -12,6 +12,7 @@ export default function Projects() {
 
   function getScreenWidth() {
     const { innerWidth: width } = window;
+    if (width > 720) return 720;
     return width;
   }
   const [screenWidth, setScreenWidth] = useState<number | undefined>(
@@ -47,6 +48,7 @@ export default function Projects() {
           </p>
 
           <BounceCards
+            id="0"
             className="overflow-scroll scrollbar-hide"
             images={[first, second, third, fourth, fifth]}
             containerWidth={screenWidth}
@@ -62,6 +64,7 @@ export default function Projects() {
             체카의 상품화 서비스를 이용하는 딜러용 앱입니다
           </p>
           <BounceCards
+            id="1"
             className="overflow-scroll scrollbar-hide"
             images={[dealer_0, dealer_1, dealer_2, dealer_3]}
             containerWidth={screenWidth}
@@ -77,6 +80,7 @@ export default function Projects() {
             라벨을 웹에서 디자인하고 빅솔론 프린터로 출력할 수 있습니다
           </p>
           <BounceCards
+            id="2"
             className="overflow-scroll scrollbar-hide"
             images={[label_0, label_1, label_2]}
             enableHover
