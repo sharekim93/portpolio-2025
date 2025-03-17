@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 
 interface BounceCardsProps {
+  id?: string;
   className?: string;
   images?: string[];
   containerWidth?: number;
@@ -29,6 +30,7 @@ export default function BounceCards({
     "rotate(2deg) translate(170px)",
   ],
   enableHover = false,
+  id,
 }: BounceCardsProps) {
   useEffect(() => {
     gsap.fromTo(
@@ -39,7 +41,7 @@ export default function BounceCards({
         stagger: animationStagger,
         ease: easeType,
         delay: animationDelay,
-      },
+      }
     );
   }, [animationDelay, animationStagger, easeType]);
 
@@ -56,7 +58,7 @@ export default function BounceCards({
 
   const getPushedTransform = (
     baseTransform: string,
-    offsetX: number,
+    offsetX: number
   ): string => {
     const translateRegex = /translate\(([-0-9.]+)px\)/;
     const match = baseTransform.match(translateRegex);
@@ -75,7 +77,7 @@ export default function BounceCards({
     if (!enableHover) return;
 
     images.forEach((_, i) => {
-      const selector = `.card-${i}`;
+      const selector = `.card-${id}-${i}`;
       gsap.killTweensOf(selector);
 
       const baseTransform = transformStyles[i] || "none";
@@ -134,7 +136,7 @@ export default function BounceCards({
       {images.map((src, idx) => (
         <div
           key={idx}
-          className={`card card-${idx} absolute w-[200px] aspect-square border-8 border-white rounded-[30px] overflow-hidden`}
+          className={`card card-${id}-${idx} absolute w-[200px] aspect-square border-8 border-white rounded-[30px] overflow-hidden`}
           style={{
             boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
             transform: transformStyles[idx] || "none",
@@ -145,7 +147,7 @@ export default function BounceCards({
           <img
             className="w-full h-full object-cover"
             src={src}
-            alt={`card-${idx}`}
+            alt={`card-${id}-${idx}`}
           />
         </div>
       ))}
