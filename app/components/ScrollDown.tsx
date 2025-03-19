@@ -53,7 +53,7 @@ export default function ScrollDown() {
     ) {
       sections[currentSectionIndex + 1].scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
       });
     }
   };
