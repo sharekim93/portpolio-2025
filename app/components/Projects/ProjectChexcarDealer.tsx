@@ -4,7 +4,7 @@ import { dealer_0, dealer_1, dealer_2, dealer_3 } from "@/images/dealer";
 import BarcodeBlock from "../molecules/BarcodeBlock";
 
 const ProjectChexcarDealer = () => {
-  const APP_STORE_URL = "itms-apps://apps.apple.com/app/id6739533256";
+  const APP_STORE_URL = "itms-apps://apps.apple.com/app/id6739524233";
   const PLAY_STORE_URL =
     "https://play.google.com/store/apps/details?id=kr.co.chexcar.dealer";
   const { screenWidth } = useScreenWidth();
