@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import tistory from "@/images/tistory.svg";
 import githubMark from "@/images/github-mark.svg";
 import { BlogURL, GithubURL } from "@/constants";
-import { fadeIn } from "@/styles/animation";
 
 const FloatingActionButton = () => {
   const [isOpen, setIsOpen] = useState(false);
