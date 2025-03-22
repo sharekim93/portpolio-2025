@@ -6,6 +6,13 @@ import tistory from "@/images/tistory.svg";
 import githubMark from "@/images/github-mark.svg";
 import { BlogURL, GithubURL } from "@/constants";
 
+type ActionButtonOption = {
+  icon: React.ReactElement;
+  color: string;
+  onClick: () => void;
+  label: string;
+};
+
 const FloatingActionButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +20,12 @@ const FloatingActionButton = () => {
     setIsOpen(!isOpen);
   };
 
-  const ActionButton = ({ icon, color, onClick, label }) => (
+  const ActionButton = ({
+    icon,
+    color,
+    onClick,
+    label,
+  }: ActionButtonOption) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
