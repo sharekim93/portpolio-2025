@@ -11,7 +11,8 @@ export default function ScrollDown() {
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(false);
-      const lastSectionHeight = document?.getElementById("info")?.clientHeight;
+      const lastSectionHeight =
+        document?.getElementById("projects")?.clientHeight;
 
       if (
         lastSectionHeight &&

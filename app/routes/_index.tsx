@@ -7,7 +7,9 @@ const HomePage = () => {
   const AboutComponent = lazy(() => import("@/components/About"));
   const ExperienceComponent = lazy(() => import("@/components/Experience"));
   const ProjectsComponent = lazy(() => import("@/components/Projects"));
-  const InfoComponent = lazy(() => import("@/components/Info"));
+  const FloatingActionButtonComponent = lazy(
+    () => import("@/components/molecules/FloatingActionButton")
+  );
 
   return (
     <div className="container w-screen h-full px-8 md:px-20">
@@ -22,7 +24,7 @@ const HomePage = () => {
         <ProjectsComponent />
       </Suspense>
       <Suspense fallback={<CustomFallback />}>
-        <InfoComponent />
+        <FloatingActionButtonComponent />
       </Suspense>
       <ScrollDown />
     </div>
