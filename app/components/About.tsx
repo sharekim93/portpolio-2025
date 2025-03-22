@@ -24,18 +24,6 @@ export default function About() {
         개발 및 유지비용을 최소화하고 사용자에게는 좋은 UX를 제공하는 개발자가
         되고자 합니다.
       </p>
-
-      <p className="text-sm md:text-lg leading-relaxed">
-        하지만 무엇보다 중요한 것은 비즈니스 문제의 해결에 있다고 생각합니다.
-        <br />
-        훌륭한 기술을 적용하기 위해 정작 중요한 비즈니스 문제 해결에 필요한
-        시간을 허비한다면 그것은 훌륭한 해결책이 아닐 것입니다.
-      </p>
-
-      <p className="text-sm md:text-lg leading-relaxed">
-        끈기 있게 문제를 해결해나가는 문제해결능력으로 비즈니스를 성공적으로
-        이끌어가는 개발자가 되겠습니다.
-      </p>
     </motion.section>
   );
 }
