@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/styles/animation";
 import useObserver from "@/hooks/useObserver";
+import ProfileCanvas from "./molecules/ProfileCanvas";
 
 export default function Intro() {
   const { ref, animation } = useObserver();
@@ -27,6 +28,7 @@ export default function Intro() {
           생각합니다.
         </p>
       </motion.section>
+      <ProfileCanvas />
     </>
   );
 }

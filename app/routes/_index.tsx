@@ -6,7 +6,7 @@ import { Suspense, lazy } from "react";
 const HomePage = () => {
   const AboutComponent = lazy(() => import("@/components/About"));
   const ExperienceComponent = lazy(() => import("@/components/Experience"));
-  const ProjectsComponent = lazy(() => import("@/components/Projects"));
+  const ProjectsComponent = lazy(() => import("@/components/projects"));
   const FloatingActionButtonComponent = lazy(
     () => import("@/components/molecules/FloatingActionButton")
   );
