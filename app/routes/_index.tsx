@@ -2,7 +2,6 @@ import CustomFallback from "@/components/CustomFallback";
 import Intro from "@/components/Intro";
 import ScrollDown from "@/components/ScrollDown";
 import { Suspense, lazy } from "react";
-import CanvasArea from "@/components/molecules/CanvasArea";
 
 const HomePage = () => {
   const AboutComponent = lazy(() => import("@/components/About"));
@@ -11,6 +10,7 @@ const HomePage = () => {
   const FloatingActionButtonComponent = lazy(
     () => import("@/components/molecules/FloatingActionButton")
   );
+  const CanvasArea = lazy(() => import("@/components/molecules/CanvasArea"));
 
   return (
     <div className="container w-screen h-full px-8 md:px-20">
@@ -27,8 +27,10 @@ const HomePage = () => {
       <Suspense fallback={<CustomFallback />}>
         <FloatingActionButtonComponent />
       </Suspense>
+      <Suspense fallback={<CustomFallback />}>
+        <CanvasArea />
+      </Suspense>
       <ScrollDown />
-      <CanvasArea />
     </div>
   );
 };
