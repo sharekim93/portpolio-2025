@@ -3,7 +3,7 @@ export default class Particle {
   private y = 0;
   private radius = (Math.PI / 180) * 360;
   private vy = 1;
-  private acc = 1.03;
+  private acc = 1.01;
 
   constructor(x: number, y: number, radius: number, vy: number) {
     this.x = x;
@@ -13,15 +13,15 @@ export default class Particle {
   }
 
   update() {
-    this.vy = this.acc;
-    this.y = this.vy;
+    this.vy *= this.acc;
+    this.y += this.vy;
   }
 
   draw(ctx: CanvasRenderingContext2D | null) {
     if (ctx) {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, (Math.PI / 180) * 360);
-      ctx.fillStyle = "orange";
+      ctx.fillStyle = "#FFFFFF";
       ctx.fill();
       ctx.closePath();
     }

@@ -2,6 +2,7 @@ import CustomFallback from "@/components/CustomFallback";
 import Intro from "@/components/Intro";
 import ScrollDown from "@/components/ScrollDown";
 import { Suspense, lazy } from "react";
+import CanvasArea from "@/components/molecules/CanvasArea";
 
 const HomePage = () => {
   const AboutComponent = lazy(() => import("@/components/About"));
@@ -27,6 +28,7 @@ const HomePage = () => {
         <FloatingActionButtonComponent />
       </Suspense>
       <ScrollDown />
+      <CanvasArea />
     </div>
   );
 };
