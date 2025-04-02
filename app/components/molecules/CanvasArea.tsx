@@ -118,15 +118,41 @@ const CanvasArea = () => {
     generateBlossoms();
 
     window.addEventListener("resize", handleResize);
+
+    // 스크롤 이벤트 처리 개선
+    const handleScroll = () => {
+      // 스크롤 중에도 애니메이션 프레임 유지
+      if (!requestRef.current) {
+        requestRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    // passive 옵션으로 성능 최적화
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     requestRef.current = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
       cancelAnimationFrame(requestRef.current);
     };
   }, [init, generateBlossoms, animate, handleResize]);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: "fixed",
+        zIndex: "-1",
+        top: 0,
+        left: 0,
+        backgroundColor: "#FAF9F6",
+        willChange: "transform", // 성능 최적화
+        transform: "translateZ(0)", // 하드웨어 가속 활성화
+      }}
+    />
+  );
 };
 
 export default CanvasArea;
