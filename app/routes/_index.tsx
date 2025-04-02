@@ -4,7 +4,7 @@ import ScrollDown from "@/components/ScrollDown";
 import { Suspense, lazy } from "react";
 
 const HomePage = () => {
-  const AboutComponent = lazy(() => import("@/components/About"));
+  const SkillsComponent = lazy(() => import("@/components/Skills"));
   const ExperienceComponent = lazy(() => import("@/components/Experience"));
   const ProjectsComponent = lazy(() => import("@/components/Projects"));
   const FloatingActionButtonComponent = lazy(
@@ -16,7 +16,7 @@ const HomePage = () => {
     <div className="container w-screen h-full px-8 md:px-20">
       <Intro />
       <Suspense fallback={<CustomFallback />}>
-        <AboutComponent />
+        <SkillsComponent />
       </Suspense>
       <Suspense fallback={<CustomFallback />}>
         <ExperienceComponent />

@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useRef } from "react";
 import CherryBlossom from "@/utils/canvas/CherryBlossom";
+import PinkPetal from "@/utils/canvas/PinkPetal";
 
 const CanvasArea = () => {
   const requestRef = useRef<number>(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const blossomsRef = useRef<CherryBlossom[]>([]);
+  const blossomsRef = useRef<(CherryBlossom | PinkPetal)[]>([]);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
 
   const randomNumBetween = (min: number, max: number) => {
@@ -64,6 +65,9 @@ const CanvasArea = () => {
         color
       );
       temporalBlossoms.push(blossom);
+
+      const pinkPetal = new PinkPetal(x, y, size, vx, vy, color);
+      temporalBlossoms.push(pinkPetal);
     }
 
     blossomsRef.current = temporalBlossoms;

@@ -19,13 +19,18 @@ export default function Intro() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
           Frontend Developer, Share Kim
         </h1>
-        <p className="text-md md:text-lg mt-8 text-gray-600">
-          안녕하세요, Frontend 개발자 김나눔입니다.
-        </p>
-        <p className="text-md md:text-lg text-gray-600">
-          Performance, User Experience, Developer Experience 를 중요하게
-          생각합니다.
-        </p>
+        <div className="flex flex-col gap-2">
+          <p className="text-md md:text-lg mt-8 text-gray-600">
+            안녕하세요, Frontend 개발자 김나눔입니다.
+          </p>
+          <p className="text-md md:text-lg text-gray-600">
+            Performance, User Experience, Developer Experience 를 중요하게
+            생각합니다.
+          </p>
+          <p className="text-md md:text-lg text-gray-600">
+            그 중, 비즈니스 문제 해결을 가장 중요하게 생각합니다.
+          </p>
+        </div>
       </motion.section>
     </>
   );
