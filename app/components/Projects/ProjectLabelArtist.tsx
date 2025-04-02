@@ -24,14 +24,14 @@ const ProjectLabelArtist = () => {
           playStoreUrl={PLAY_STORE_URL}
         />
       </div>
-      <BounceCards
+      {/* <BounceCards
         id="2"
         className="overflow-scroll scrollbar-hide"
         images={[label_0, label_1, label_2]}
         enableHover
         containerWidth={screenWidth}
         containerHeight={400}
-      />
+      /> */}
     </li>
   );
 };

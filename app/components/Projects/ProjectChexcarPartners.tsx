@@ -26,14 +26,14 @@ const ProjectChexcarPartners = () => {
           playStoreUrl={PLAY_STORE_URL}
         />
       </div>
-      <BounceCards
+      {/* <BounceCards
         id="0"
         className="overflow-scroll scrollbar-hide"
         images={[first, second, third, fourth, fifth]}
         containerWidth={screenWidth && screenWidth * 0.8}
         enableHover
         containerHeight={400}
-      />
+      /> */}
     </li>
   );
 };

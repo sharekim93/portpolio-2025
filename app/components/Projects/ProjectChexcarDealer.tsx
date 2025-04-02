@@ -24,14 +24,14 @@ const ProjectChexcarDealer = () => {
           playStoreUrl={PLAY_STORE_URL}
         />
       </div>
-      <BounceCards
+      {/* <BounceCards
         id="1"
         className="overflow-scroll scrollbar-hide"
         images={[dealer_0, dealer_1, dealer_2, dealer_3]}
         containerWidth={screenWidth}
         enableHover
         containerHeight={400}
-      />
+      /> */}
     </li>
   );
 };
